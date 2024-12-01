@@ -81,23 +81,28 @@ each case. Take a screenshot of your graph and put them here by modifying this f
 it to this repository.
 
 Insertion, search, and deletion running time (already sorted):
-
-![Firefly picture of a cat 86147](https://github.com/user-attachments/assets/8b2d008e-3011-4979-97b8-fa2e9886a01a)
-
+![Hash Table time, sorted, in nanoseconds(1).png](Hash%20Table%20time%2C%20sorted%2C%20in%20nanoseconds%281%29.png)
 
 Insertion, search, and deletion running time (shuffled):
+![Hash Table time, shuffled, in nanoseconds(1).png](Hash%20Table%20time%2C%20shuffled%2C%20in%20nanoseconds%281%29.png)
 
 Insertion, search, and deletion running time (reversed):
+![Hash Table time, reversed, in nanoseconds(1).png](Hash%20Table%20time%2C%20reversed%2C%20in%20nanoseconds%281%29.png)
 
 ## 5. **Document your Dataset and Results**
 Document the source of your dataset and any modifications you made to it. Describe the results of your analysis and 
 how it compares to the theoretical performance of the hash table operations.
 
-Dataset Source: // FINISH ME
+Dataset Source: https://docs.google.com/spreadsheets/d/1s-ItBZwDzWb_taDPD2L2jrUbNzl4pxjSgXcE5dza4tc/edit?gid=64960459#gid=64960459
 
-Dataset Modifications ("None" if unchanged): // FINISH ME
+Dataset Modifications ("None" if unchanged): The data used is from August, so it is not up-to-date. I removed most of the 
+sections because it only serves to give a little bit of additional information for individual players, and is unnecessary
+for simply implementing a data structure. Thus, the only remaining categories are Username, User ID, Skill, and User Title.
+These are explained in Catcher.java
 
-Result Analysis: // FINISH ME
+Result Analysis: A linear time growth with some variance is expected. This is because we need to perform these operations
+on n values, making the total runtime increase as n increases (despite the O(1) runtime of the operations). The large complexity
+
 
 ## Submission:
 

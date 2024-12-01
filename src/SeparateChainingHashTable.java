@@ -1,3 +1,10 @@
+/*
+ * @file: SeparateChainingHashTable.java
+ * @description: This class implements a separate chaining hash table.
+ * @author: Elliott Lowman
+ * @date: November 30, 2024
+ */
+
 import java.util.LinkedList;
 import java.util.List;
 

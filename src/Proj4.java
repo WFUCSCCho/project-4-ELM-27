@@ -1,3 +1,10 @@
+/*
+ * @file: Proj4.java
+ * @description: This class runs the tests for SeparateChainingHashTable.java
+ * @author: Elliott Lowman
+ * @date: November 30, 2024
+ */
+
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -18,7 +25,9 @@ public class Proj4 {
 
         String inputFileName = args[0];
         int numLines = Integer.parseInt(args[1]);
-        SeparateChainingHashTable<Catcher> hashTable = new SeparateChainingHashTable<>();
+        SeparateChainingHashTable<Catcher> hashTable1 = new SeparateChainingHashTable<>();
+        SeparateChainingHashTable<Catcher> hashTable2 = new SeparateChainingHashTable<>();
+        SeparateChainingHashTable<Catcher> hashTable3 = new SeparateChainingHashTable<>();
         ArrayList<Catcher> testList = new ArrayList<>();
         long startTime;
         long endTime;
@@ -45,7 +54,7 @@ public class Proj4 {
         Collections.sort(testList);
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.insert(testList.get(i));
+            hashTable1.insert(testList.get(i));
         }
         endTime = System.nanoTime();
         writeToFile(Long.toString(endTime - startTime), "analysis.txt");
@@ -53,7 +62,7 @@ public class Proj4 {
 
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.contains(testList.get(i));
+            hashTable1.contains(testList.get(i));
         }
         endTime = System.nanoTime();
         writeToFile(Long.toString(endTime - startTime), "analysis.txt");
@@ -61,7 +70,7 @@ public class Proj4 {
 
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.remove(testList.get(i));
+            hashTable1.remove(testList.get(i));
         }
         endTime = System.nanoTime();
         writeToFile(Long.toString(endTime - startTime), "analysis.txt");
@@ -71,7 +80,7 @@ public class Proj4 {
         Collections.shuffle(testList);
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.insert(testList.get(i));
+            hashTable2.insert(testList.get(i));
         }
         endTime = System.nanoTime();
         writeToFile(Long.toString(endTime - startTime), "analysis.txt");
@@ -79,7 +88,7 @@ public class Proj4 {
 
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.contains(testList.get(i));
+            hashTable2.contains(testList.get(i));
         }
         endTime = System.nanoTime();
         writeToFile(Long.toString(endTime - startTime), "analysis.txt");
@@ -87,7 +96,7 @@ public class Proj4 {
 
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.remove(testList.get(i));
+            hashTable2.remove(testList.get(i));
         }
         endTime = System.nanoTime();
         writeToFile(Long.toString(endTime - startTime), "analysis.txt");
@@ -97,7 +106,7 @@ public class Proj4 {
         Collections.sort(testList, Collections.reverseOrder());
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.insert(testList.get(i));
+            hashTable3.insert(testList.get(i));
         }
         endTime = System.nanoTime();
         writeToFile(Long.toString(endTime - startTime), "analysis.txt");
@@ -105,7 +114,7 @@ public class Proj4 {
 
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.contains(testList.get(i));
+            hashTable3.contains(testList.get(i));
         }
         endTime = System.nanoTime();
         writeToFile(Long.toString(endTime - startTime), "analysis.txt");
@@ -113,7 +122,7 @@ public class Proj4 {
 
         startTime = System.nanoTime();
         for(int i = 0; i < numLines; i++) {
-            hashTable.remove(testList.get(i));
+            hashTable3.remove(testList.get(i));
         }
         endTime = System.nanoTime();
         fileNewLine(Long.toString(endTime - startTime), "analysis.txt");
